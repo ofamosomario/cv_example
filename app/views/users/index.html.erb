@@ -16,8 +16,8 @@
       <tr style="border: 1px solid">
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td style="border-left: 1px solid black"><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td style="border-left: 1px solid black"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="border-left: 1px solid black"><%= link_to 'Edit', edit_user_path(user), class: 'button is-link' %></td>
+        <td style="border-left: 1px solid black"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-link' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: 'button is-link' %>
