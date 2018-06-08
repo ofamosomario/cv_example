@@ -4,41 +4,41 @@
       <div class="card-content">
         <h2 class="title">Cadastrar Usuário</h2>
 
-        <label>Nome</label>
+        <label>Name</label>
         <input type='text' v-model="user.name" class="input">
     
         <label>Email:</label>
         <input type='text' v-model="user.email" class="input">
     
-        <label>Telefone:</label>
+        <label>Phone:</label>
         <input type='text' v-model="user.phone" class="input">
     
-        <label>Descrição</label>
+        <label>Description</label>
         <input type='text' v-model="user.description" class="input">
     
-        <label>Experiencia 1</label>
+        <label>Experience 1</label>
         <textarea class="textarea" v-model="user.exp1"></textarea>
     
-        <label>Experiencia 2</label>
+        <label>Experience 2</label>
         <textarea class="textarea" v-model="user.exp2"></textarea>
     
-        <label>Experiencia 3</label>
+        <label>Experience 3</label>
         <textarea class="textarea" v-model="user.exp3"></textarea>
     
-        <label>Formação</label>
+        <label>Degree</label>
         <textarea class="textarea" v-model="user.education"></textarea>
     
         <label>Extras</label>
         <textarea class="textarea" v-model="user.extras"></textarea>
     
-        <label>Sexo</label>
+        <label>Sex</label>
         <select v-model="user.gender" class="select">
-          <option>Masculino</option>
-          <option>Feminino</option>
+          <option>Male</option>
+          <option>Female</option>
         </select>
       </div>
       <div class="card-footer">
-        <button @click="saveUser" class="button is-link">Criar Currículo</button>
+        <button @click="saveUser" class="button is-link">Create a CV</button>
       </div>
     </div>
   </div>
@@ -46,10 +46,10 @@
   <div class='column is-two-thirds preview card'>
     <div id="cv-preview" class="card-content">
       <h3 class="center title name">{{ user.name }}</h3>
-      <p class="center subtitle"><b v-if="user.phone != null">Telefone de contato:</b> {{ user.phone }}    <b v-if="user.email != null">Email:</b> {{ user.email }}    <b v-if="user.gender != null">Sexo:</b> {{ user.gender }}</p>
+      <p class="center subtitle"><b v-if="user.phone != null">Contact Number:</b> {{ user.phone }}    <b v-if="user.email != null">Email:</b> {{ user.email }}    <b v-if="user.gender != null">Sex:</b> {{ user.gender }}</p>
 
       <div class="description">
-        <p class="subtitle" v-if="user.description != null">Descrição</p>
+        <p class="subtitle" v-if="user.description != null">Description</p>
         <p>
           {{ user.description }}
         </p>
