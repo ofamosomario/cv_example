@@ -13,7 +13,7 @@
         <input type='text' v-model="user.email" class="input">
     
         <label>Phone:</label>
-        <input type='text' v-model="user.phone" class="input">
+        <the-mask mask="+## (##) #.####-####" class="input" type='text' v-model="user.phone" /></the-mask>
     
         <label>Description</label>
         <input type='text' v-model="user.description" class="input">
@@ -103,4 +103,4 @@
       </div>
     </div>
   </div>
-<% end %>s
+<% end %>
